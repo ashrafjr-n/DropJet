@@ -18,7 +18,7 @@ export function Navbar() {
           <Link to="/login">
             <Button variant="ghost">Login</Button>
           </Link>
-          <Link to="/login">
+          <Link to="/dashboard">
             <Button>Get Started</Button>
           </Link>
         </div>

@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-export default function Login() {
+export default function Register() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-background px-6">
       <Link to="/" className="text-2xl font-bold tracking-tight">
@@ -18,31 +18,36 @@ export default function Login() {
 
       <Card className="w-full max-w-sm">
         <CardHeader>
-          <CardTitle className="text-center text-2xl">Welcome back</CardTitle>
+          <CardTitle className="text-center text-2xl">Create account</CardTitle>
         </CardHeader>
 
         <CardContent className="space-y-5">
+          <div className="space-y-2">
+            <Label htmlFor="name">Name</Label>
+            <Input id="name" type="text" placeholder="John Doe" />
+          </div>
+
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input id="email" type="email" placeholder="you@example.com" />
           </div>
 
           <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <Label htmlFor="password">Password</Label>
-              <a href="#" className="text-xs text-muted-foreground hover:text-foreground">
-                Forgot password?
-              </a>
-            </div>
+            <Label htmlFor="password">Password</Label>
             <Input id="password" type="password" placeholder="••••••••" />
           </div>
 
-          <Button className="w-full">Login</Button>
+          <div className="space-y-2">
+            <Label htmlFor="confirm-password">Confirm Password</Label>
+            <Input id="confirm-password" type="password" placeholder="••••••••" />
+          </div>
+
+          <Button className="w-full">Create Account</Button>
 
           <p className="text-center text-sm text-muted-foreground">
-            Don't have an account?{" "}
-            <Link to="/register" className="font-medium text-foreground hover:underline">
-              Register
+            Already have an account?{" "}
+            <Link to="/login" className="font-medium text-foreground hover:underline">
+              Login
             </Link>
           </p>
         </CardContent>

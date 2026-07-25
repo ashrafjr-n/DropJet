@@ -6,6 +6,8 @@ import Dashboard from "@/pages/Dashboard"
 import Upload from "@/pages/Upload"
 import MyFiles from "@/pages/MyFiles"
 import SharedFile from "@/pages/SharedFile"
+import Analytics from "@/pages/Analytics"
+import Settings from "@/pages/Settings"
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/dashboard/files" element={<MyFiles />} />
+      <Route path="/dashboard/analytics" element={<Analytics />} />
+      <Route path="/dashboard/settings" element={<Settings />} />
       <Route path="/upload" element={<Upload />} />
       <Route path="/share/:id" element={<SharedFile />} />
     </Routes>

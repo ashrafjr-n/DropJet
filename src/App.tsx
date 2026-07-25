@@ -9,6 +9,8 @@ import SharedFile from "@/pages/SharedFile"
 import SharedLinks from "@/pages/SharedLinks"
 import Analytics from "@/pages/Analytics"
 import Settings from "@/pages/Settings"
+import NotFound from "@/pages/NotFound"
+import ExpiredFile from "@/pages/ExpiredFile"
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <Route path="/dashboard/settings" element={<Settings />} />
       <Route path="/upload" element={<Upload />} />
       <Route path="/share/:id" element={<SharedFile />} />
+      <Route path="/expired/:id" element={<ExpiredFile />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }
